@@ -18,9 +18,10 @@ function delete_selection(x) {
     console.log(x);
     if (quantities[x] > 0) {
         quantities[x] = quantities[x] - 1;
+        totals[x] = prices[x] * quantities[x];
+        totalOrderAmt -= prices[x];
     }
-    totals[x] = prices[x] * quantities[x];
-    totalOrderAmt -= prices[x];
+
 
     display_all();
 }
